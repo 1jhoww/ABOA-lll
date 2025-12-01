@@ -120,10 +120,6 @@ export default function Cadastro() {
           <p>
             Já tem uma conta? <a href="/login">Faça login</a>
           </p>
-          <p>
-            Tem um estabelecimento?{" "}
-            <a href="/cadastro-estabelecimento">Cadastre-se</a>
-          </p>
         </div>
       </div>
 
