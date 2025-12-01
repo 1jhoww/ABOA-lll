@@ -1,5 +1,4 @@
-
-# 📄 README.md — Projeto ABOA (Versão Oficial)
+# 📄 README.md — Projeto ABOA (Atualizado com instruções de instalação)
 
 ```markdown
 # Aboa — Aplicativo de Recomendação de Restaurantes
@@ -20,7 +19,7 @@ Este documento explica como instalar, configurar e rodar o sistema em qualquer c
 
 # 1. Requisitos Obrigatórios
 
-Antes de rodar o projeto, é necessário instalar:
+Antes de rodar o projeto, é necessário instalar na máquina:
 
 ### ✔ Node.js (versão 18+)
 Download: https://nodejs.org/
@@ -53,7 +52,80 @@ Se o servidor iniciar, o Mongo está OK.
 
 ---
 
-# 3. Como Rodar o Back-end
+# 3. Instalação das Tecnologias do Backend
+
+Todas as tecnologias abaixo já estão declaradas no `package.json`.  
+O professor **não precisa instalar nada manualmente** além de rodar:
+
+```
+
+npm install
+
+```
+
+na pasta `backend`.
+
+Mas segue a lista para documentação:
+
+### ✔ Node.js  
+Já instalado pelo requisito inicial.
+
+### ✔ Express  
+Framework do servidor.  
+Instalação (já embutida):  
+```
+
+npm install express
+
+```
+
+### ✔ MongoDB + Mongoose  
+Banco de dados + ORM.  
+```
+
+npm install mongoose
+
+```
+
+### ✔ Multer (upload de imagens)  
+Responsável por salvar fotos enviadas pelo usuário.  
+```
+
+npm install multer
+
+```
+
+### ✔ JWT (Json Web Token) – Autenticação  
+```
+
+npm install jsonwebtoken
+
+```
+
+### ✔ Bcrypt – Criptografia de senhas  
+```
+
+npm install bcrypt
+
+```
+
+### ✔ CORS – Permitir comunicação com o frontend  
+```
+
+npm install cors
+
+```
+
+### ✔ Dotenv – Leitura de variáveis do .env  
+```
+
+npm install dotenv
+
+```
+
+---
+
+# 4. Como Rodar o Back-end
 
 Acesse a pasta:
 
@@ -73,7 +145,7 @@ npm install
 
 ---
 
-## 3.1 Criar o arquivo `.env`
+## 4.1 Criar o arquivo `.env`
 
 Dentro da pasta **backend**, crie um arquivo chamado:
 
@@ -97,7 +169,7 @@ Sem esse arquivo o back-end não conecta ao MongoDB.
 
 ---
 
-## 3.2 Rodar o servidor
+## 4.2 Rodar o servidor
 
 ```
 npm run dev
@@ -112,7 +184,7 @@ MongoDB conectado com sucesso!
 
 ---
 
-# 4. Como Rodar o Front-end
+# 5. Como Rodar o Front-end
 
 Acesse a pasta:
 
@@ -140,7 +212,7 @@ http://localhost:5173
 
 ---
 
-# 5. Tecnologias Utilizadas
+# 6. Tecnologias Utilizadas
 
 ### Back-end
 
@@ -163,119 +235,36 @@ http://localhost:5173
 
 ---
 
-# 6. Estrutura de pastas
+# 7. Estrutura de pastas
 
 ```
 📦 
-└─ ABOA - lllSEM
-   ├─ aboa-react
-eslint.config.js
-   │  ├─ index.html
-package-lock.json
-   │  ├─ package.json
-   │  ├─ public
-   │  │  ├─ imgs
-   │  │  │  ├─ Beer.png
-   │  │  │  ├─ Burger.png
-   │  │  │  ├─ Chicken.png
-   │  │  │  ├─ Cocktail.png
-   │  │  │  ├─ Desktop - 1 (1).png
-   │  │  │  ├─ Food.png
-   │  │  │  ├─ Group 10.png
-   │  │  │  ├─ Group 11.png
-   │  │  │  ├─ Group 12.png
-   │  │  │  ├─ Group 5 - Copia - Copia.png
-   │  │  │  ├─ Group 5 - Copia.png
-   │  │  │  ├─ Group 5.png
-   │  │  │  ├─ Japanese food.png
-   │  │  │  ├─ Logo Aboa 1.png
-   │  │  │  ├─ Nigiri.png
-   │  │  │  ├─ Pizza.png
-   │  │  │  ├─ backgrounnd.png
-   │  │  │  ├─ bk.jpg
-   │  │  │  ├─ fast food.png
-   │  │  │  ├─ fundo.png
-   │  │  │  ├─ icons8-facebook-30.png
-   │  │  │  ├─ icons8-instagram-50.png
-   │  │  │  └─ icons8-x-50.png
-   │  │  └─ vite.svg
-   │  ├─ src
-   │  │  ├─ App.jsx
-   │  │  ├─ assets
-   │  │  │  └─ react.svg
-   │  │  ├─ components
-   │  │  │  ├─ Header.jsx
-   │  │  │  └─ header.module.css
-main.jsx
-pages
-   │  │  │  ├─ Cadastro
-   │  │  │  │  ├─ Cadastro.jsx
-   │  │  │  │  └─ cadastro.module.css
-   │  │  │  ├─ CadastroEstabelecimento
-   │  │  │  │  ├─ CadastroEstabelecimento.jsx
-   │  │  │  │  └─ cadastroestabelecimento.module.css
-   │  │  │  ├─ Cardapio
-   │  │  │  │  ├─ Cardapio.jsx
-   │  │  │  │  └─ cardapio.module.css
-   │  │  │  ├─ ContaEstabelecimento
-   │  │  │  │  ├─ EditarItemModal.jsx
-   │  │  │  │  ├─ EditarPerfilModal.jsx
-   │  │  │  │  ├─ MinhaContaRest.jsx
-   │  │  │  │  ├─ editaritem.module.css
-   │  │  │  │  ├─ editarperfil.module.css
-   │  │  │  │  └─ minhaconta.module.css
-   │  │  │  ├─ Home
-   │  │  │  │  ├─ Home.jsx
-   │  │  │  │  └─ Home.module.css
-   │  │  │  ├─ Login
-   │  │  │  │  ├─ Login.jsx
-   │  │  │  │  └─ login.module.css
-   │  │  │  ├─ MinhaContaUsuario
-   │  │  │  │  ├─ MinhaContaUsuario.jsx
-   │  │  │  │  └─ minhacontausuario.module.css
-   │  │  │  └─ Recomenda
-   │  │  │     ├─ Recomenda.jsx
-   │  │  │     └─ recomenda_nova.module.css
-styles
-   │  │     └─ global.css
-   │  └─ vite.config.js
-   └─ backend
-      ├─ config
-      │  └─ db.js
-      ├─ middleware
-      │  └─ auth.js
-      ├─ models
-      │  ├─ Estabelecimento.js
-      │  ├─ ItemCardapio.js
-      │  └─ Usuario.js
-      ├─ package-lock.json
-      ├─ package.json
-      ├─ routes
-      │  ├─ authRoutes.js
-      │  ├─ cardapioRoutes.js
-      │  └─ estabelecimentoRoutes.js
-      ├─ server.js
-      └─ uploads
-         ├─ 1764551191780-7633.jpg
-         ├─ 1764551327589-9923.jpg
-         ├─ 1764551372489-1195.jpg
-         ├─ 1764551409565-7428.jpg
-         ├─ 1764553314963-8933.jpg
-         ├─ 1764553901369-4875.jpg
-         ├─ 1764553920507-5703.jpg
-         ├─ 1764553958245-5468.jpg
-         ├─ 1764554039679-7811.jpg
-         ├─ 1764554312036-1316.jpg
-         ├─ 1764554363889-4898.jpg
-         ├─ 1764554396358-1600.jpg
-         ├─ 1764555682854-2465.jpg
-         ├─ 1764555699780-2327.jpg
-         ├─ 1764557818104-9852.jpg
-         ├─ 1764557927826-7307.jpg
-         └─ 1764557948384-6631.jpg
+└─ ABOA - lllSEM
+   ├─ aboa-react
+   │  ├─ index.html
+   │  ├─ package.json
+   │  ├─ public
+   │  ├─ src
+   │  │  ├─ App.jsx
+   │  │  ├─ assets
+   │  │  ├─ components
+   │  │  ├─ main.jsx
+   │  │  ├─ pages
+   │  │  └─ styles
+   │  └─ vite.config.js
+   └─ backend
+      ├─ config
+      ├─ middleware
+      ├─ models
+      ├─ routes
+      ├─ server.js
+      ├─ uploads
+      └─ package.json
+```
 
+---
 
-# 7. Erros Comuns e Como Resolver
+# 8. Erros Comuns e Como Resolver
 
 ### ❌ Erro:
 
@@ -287,7 +276,7 @@ MongooseError: The uri parameter to openUri() must be a string, got "undefined"
 
 O arquivo `.env` está faltando ou escrito incorretamente.
 
-Verifique se existe:
+Confirme se existe:
 
 ```
 backend/.env
@@ -328,7 +317,7 @@ http://localhost:5000
 
 ---
 
-# 7. Como Rodar o Projeto Completo
+# 9. Como Rodar o Projeto Completo
 
 ## Passo 1 — Iniciar o MongoDB
 
@@ -358,7 +347,7 @@ http://localhost:5173
 
 ---
 
-# 8. Conclusão
+# 10. Conclusão
 
 Seguindo essas instruções:
 
@@ -367,6 +356,8 @@ Seguindo essas instruções:
 3. Criar o `.env` dentro de `/backend`
 4. Rodar `npm install` nas duas pastas
 5. Iniciar ambos os servidores
+
+O projeto funcionará perfeitamente.
 
 
 ```
